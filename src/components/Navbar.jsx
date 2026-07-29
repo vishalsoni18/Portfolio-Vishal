@@ -71,7 +71,7 @@ const Navbar = () => {
                     <div className="h-6 w-px bg-white/10 mx-2" />
 
                     <div className="flex items-center gap-4">
-                        <a href="https://github.com/sonivishal66666" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                        <a href="https://github.com/vishalsoni18" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                             <Github className="w-5 h-5" />
                         </a>
                         <a href="https://linkedin.com/in/vishalsoni18" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
@@ -123,7 +123,7 @@ const Navbar = () => {
                                 )
                             ))}
                             <div className="flex gap-6 pt-6 border-t border-white/10">
-                                <a href="https://github.com/sonivishal66666" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+                                <a href="https://github.com/vishalsoni18" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
                                     <Github className="w-6 h-6" />
                                 </a>
                                 <a href="https://linkedin.com/in/vishalsoni18" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">

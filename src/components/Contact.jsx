@@ -223,8 +223,8 @@ const Contact = () => {
                     <ContactCard
                         icon={Github}
                         label="Code Repository"
-                        value="github.com/sonivishal66666"
-                        href="https://github.com/sonivishal66666/"
+                        value="github.com/vishalsoni18"
+                        href="https://github.com/vishalsoni18/"
                         color="purple-500"
                         className="opacity-80 hover:opacity-100"
                     />

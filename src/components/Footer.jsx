@@ -21,7 +21,7 @@ const Footer = () => {
     ];
 
     const socialLinks = [
-        { icon: Github, href: 'https://github.com/sonivishal66666', label: 'GitHub', color: 'hover:text-purple-400' },
+        { icon: Github, href: 'https://github.com/vishalsoni18', label: 'GitHub', color: 'hover:text-purple-400' },
         { icon: Linkedin, href: 'https://linkedin.com/in/vishalsoni18', label: 'LinkedIn', color: 'hover:text-blue-400' },
         { icon: Mail, href: 'mailto:vishalsoni6350@gmail.com', label: 'Email', color: 'hover:text-primary' },
     ];

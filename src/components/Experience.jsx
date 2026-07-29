@@ -11,9 +11,12 @@ const Experience = () => {
             company: "Indian Institute of Technology Ropar — VLED Lab",
             location: "Remote",
             period: "May 2026 - Present",
-            description: "Contributing to open-source educational infrastructure tools under IIT Ropar faculty mentorship.",
-            bullet: "Involved across design, implementation, review, and deployment of infrastructure tools.",
-            tags: ["Open Source", "Infrastructure", "Systems Design", "Collaboration"],
+            bullets: [
+                "Engineered production-ready features for CSFAQ as part of a 5-member engineering team, owning implementation, automated testing, and peer code reviews.",
+                "Led delivery of 15+ enhancements to the open-source FLN Assessment Platform, refactoring the evaluation engine, reporting infrastructure, assessment analytics, and PDF export pipeline.",
+                "Completed the Foundations of Data Science program (50/50 endorsed), earned the Legend Badge, and ranked among the Top 15 interns of the cohort."
+            ],
+            tags: ["React", "System Design", "Automated Testing", "Peer Code Reviews"],
             icon: Code,
             badge: "INTERNSHIP"
         },
@@ -23,8 +26,10 @@ const Experience = () => {
             company: "ServiceNow",
             location: "Remote",
             period: "Jun 2026 - Jul 2026",
-            description: "Completed a virtual internship focused on the ServiceNow platform, enterprise workflow automation, and IT service management (ITSM) fundamentals.",
-            bullet: "Learned ServiceNow Administration Fundamentals, Flow Designer, Automated Test Framework (ATF), Reports, and Agentic AI concepts.",
+            bullets: [
+                "Configured enterprise ITSM workflows on ServiceNow, applying Flow Designer, Automated Test Framework (ATF), and platform administration through structured exercises.",
+                "Completed the ServiceNow CSA preparation curriculum covering workflow automation, Agentic AI, and reporting modules."
+            ],
             tags: ["ServiceNow", "Workflow Automation", "ITSM", "ATF", "Agentic AI"],
             icon: Cloud,
             badge: "INTERNSHIP"
@@ -35,8 +40,10 @@ const Experience = () => {
             company: "eSim (FOSSEE, IIT Bombay)",
             location: "Remote",
             period: "Feb 2026 - Present",
-            description: "Ported eSim EDA toolchain to Ubuntu 25.04 by resolving complex dependency and toolchain failures.",
-            bullet: "Resolved 13 toolchain failures across KiCad, GHDL, LLVM, Python 3.13, and package repositories.",
+            bullets: [
+                "Debugged and resolved 13 dependency, compiler, and Python 3.13 compatibility issues to port the eSim EDA toolchain to Ubuntu 25.04.",
+                "Contributed upstream fixes for cross-platform build support."
+            ],
             tags: ["Ubuntu 25.04", "KiCad", "GHDL", "LLVM", "Python 3.13", "Toolchains"],
             icon: Terminal,
             badge: "OPEN SOURCE"
@@ -47,8 +54,10 @@ const Experience = () => {
             company: "CodSoft",
             location: "Remote",
             period: "June 2024 - July 2024",
-            description: "Developed Python scripts for automation and data processing, reinforcing scripting practices that translate directly into CI/CD workflows and infrastructure automation.",
-            bullet: "Built reusable automation scripts to streamline data processing tasks, reducing manual execution time by 40%.",
+            bullets: [
+                "Developed Python scripts for automation and data processing, reinforcing scripting practices that translate directly into CI/CD workflows and infrastructure automation.",
+                "Built reusable automation scripts to streamline data processing tasks, reducing manual execution time by 40%."
+            ],
             tags: ["Python", "Task Automation", "Scripting", "CLI Tooling"],
             icon: Code,
             badge: "INTERNSHIP"
@@ -200,13 +209,24 @@ const Experience = () => {
                                 </div>
 
                                 <div className="space-y-3 mb-6 border-l-2 border-white/10 pl-4">
-                                    <p className="text-gray-300 text-sm leading-relaxed">
-                                        {exp.description}
-                                    </p>
-                                    <div className="flex items-start gap-2 text-sm text-gray-400">
-                                        <ChevronRight className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                                        <span>{exp.bullet}</span>
-                                    </div>
+                                    {exp.description && (
+                                        <p className="text-gray-300 text-sm leading-relaxed">
+                                            {exp.description}
+                                        </p>
+                                    )}
+                                    {exp.bullets ? (
+                                        exp.bullets.map((b, idx) => (
+                                            <div key={idx} className="flex items-start gap-2 text-sm text-gray-400">
+                                                <ChevronRight className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                                                <span>{b}</span>
+                                            </div>
+                                        ))
+                                    ) : (
+                                        <div className="flex items-start gap-2 text-sm text-gray-400">
+                                            <ChevronRight className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                                            <span>{exp.bullet}</span>
+                                        </div>
+                                    )}
                                 </div>
 
                                 <div className="flex flex-wrap gap-2">
