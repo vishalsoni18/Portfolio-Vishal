@@ -395,26 +395,26 @@ const Projects = () => {
             ]
         },
         {
-            id: "PRJ-002",
-            title: "AnswerHub",
-            shortDesc: "An intelligent community Q&A and FAQ platform featuring gamification, voice search, and in-browser extractive AI summaries.",
-            infra: "React 19 + Vite 8 SPA deployed on Vercel with Supabase PostgreSQL backend.",
-            icon: <Cpu className="w-8 h-8 text-purple-400" />,
-            description: "A moderated Q&A and FAQ platform featuring role-based access control, a reputation/badge gamification engine, client-side AI summaries, Web Speech API voice search/TTS accessibility, and real-time leaderboards.",
-            metricsDisclaimer: "AI summarizer generates key insights in under 5ms completely on the client side to minimize server costs.",
-            engineeringNotes: "Configured database triggers on auth.users for automatic profile generation. Built atomic upvoting/downvoting SQL functions and indexes. Implemented Fuse.js fuzzy matching for type-ahead and duplicate question detection.",
-            githubUrl: "https://github.com/vishalsoni18/Answerhub",
-            liveUrl: "https://answerhub-zeta.vercel.app/",
-            tech: ["React 19", "Vite 8", "Supabase", "Tailwind CSS", "Framer Motion", "Fuse.js", "Web Speech API"],
+            id: "PRJ-004",
+            title: "DineOps",
+            shortDesc: "Restaurant management SaaS command center featuring 7 role-based portals, curating order workflows and offline JSON fallback.",
+            infra: "Next.js + NestJS backend deployed on Vercel and Supabase PostgreSQL.",
+            icon: <Server className="w-8 h-8 text-blue-400" />,
+            description: "Deployed a full-stack restaurant management platform with 6 RBAC-secured portals, implementing POS, kitchen display, reservations, inventory, delivery tracking, and JWT authentication. Introduced offline-first persistence with PostgreSQL, Prisma ORM, Supabase Realtime subscriptions, and automated Vercel CI/CD pipelines.",
+            metricsDisclaimer: "Offline mode preserves 100% feature parity using a local storage JSON file structure.",
+            engineeringNotes: "Designed dual-mode persistence that monitors database connections and dynamically routes queries. Implemented JWT auth with 7-tier role hierarchy and route guards.",
+            githubUrl: "https://github.com/vishalsoni18/DineOps",
+            liveUrl: "https://dine-ops-hazel.vercel.app/",
+            tech: ["Next.js", "Prisma", "Supabase", "PostgreSQL", "Cashfree", "TypeScript", "Vercel CI/CD"],
             stats: [
-                { label: "SEARCH", value: "Voice / Fuzzy" },
-                { label: "AI", value: "Client Summaries" },
-                { label: "SECURITY", value: "Row Level Policies" }
+                { label: "PORTALS", value: "6 Role-Based" },
+                { label: "DATABASE", value: "Dual-Mode / Hybrid" },
+                { label: "SECURITY", value: "JWT RBAC" }
             ],
             protocols: [
-                "Extractive frequency-based NLP summary algorithm",
-                "Supabase PostgreSQL database triggers and composite primary keys",
-                "Web Speech Recognition API and SpeechSynthesis read-aloud hooks"
+                "Connection monitoring and automatic JSON database fallback triggers",
+                "Real-time kitchen display system updates via server-sent events",
+                "Enterprise role-based access control and router guarding"
             ]
         },
         {
@@ -441,26 +441,26 @@ const Projects = () => {
             ]
         },
         {
-            id: "PRJ-004",
-            title: "DineOps",
-            shortDesc: "Restaurant management SaaS command center featuring 7 role-based portals, curating order workflows and offline JSON fallback.",
-            infra: "Next.js + NestJS backend deployed on Vercel and Supabase PostgreSQL.",
-            icon: <Server className="w-8 h-8 text-blue-400" />,
-            description: "Deployed a full-stack restaurant management platform with 6 RBAC-secured portals, implementing POS, kitchen display, reservations, inventory, delivery tracking, and JWT authentication. Introduced offline-first persistence with PostgreSQL, Prisma ORM, Supabase Realtime subscriptions, and automated Vercel CI/CD pipelines.",
-            metricsDisclaimer: "Offline mode preserves 100% feature parity using a local storage JSON file structure.",
-            engineeringNotes: "Designed dual-mode persistence that monitors database connections and dynamically routes queries. Implemented JWT auth with 7-tier role hierarchy and route guards.",
-            githubUrl: "https://github.com/vishalsoni18/DineOps",
-            liveUrl: "https://dine-ops-hazel.vercel.app/",
-            tech: ["Next.js", "Prisma", "Supabase", "PostgreSQL", "Cashfree", "TypeScript", "Vercel CI/CD"],
+            id: "PRJ-002",
+            title: "AnswerHub",
+            shortDesc: "An intelligent community Q&A and FAQ platform featuring gamification, voice search, and in-browser extractive AI summaries.",
+            infra: "React 19 + Vite 8 SPA deployed on Vercel with Supabase PostgreSQL backend.",
+            icon: <Cpu className="w-8 h-8 text-purple-400" />,
+            description: "A moderated Q&A and FAQ platform featuring role-based access control, a reputation/badge gamification engine, client-side AI summaries, Web Speech API voice search/TTS accessibility, and real-time leaderboards.",
+            metricsDisclaimer: "AI summarizer generates key insights in under 5ms completely on the client side to minimize server costs.",
+            engineeringNotes: "Configured database triggers on auth.users for automatic profile generation. Built atomic upvoting/downvoting SQL functions and indexes. Implemented Fuse.js fuzzy matching for type-ahead and duplicate question detection.",
+            githubUrl: "https://github.com/vishalsoni18/Answerhub",
+            liveUrl: "https://answerhub-zeta.vercel.app/",
+            tech: ["React 19", "Vite 8", "Supabase", "Tailwind CSS", "Framer Motion", "Fuse.js", "Web Speech API"],
             stats: [
-                { label: "PORTALS", value: "6 Role-Based" },
-                { label: "DATABASE", value: "Dual-Mode / Hybrid" },
-                { label: "SECURITY", value: "JWT RBAC" }
+                { label: "SEARCH", value: "Voice / Fuzzy" },
+                { label: "AI", value: "Client Summaries" },
+                { label: "SECURITY", value: "Row Level Policies" }
             ],
             protocols: [
-                "Connection monitoring and automatic JSON database fallback triggers",
-                "Real-time kitchen display system updates via server-sent events",
-                "Enterprise role-based access control and router guarding"
+                "Extractive frequency-based NLP summary algorithm",
+                "Supabase PostgreSQL database triggers and composite primary keys",
+                "Web Speech Recognition API and SpeechSynthesis read-aloud hooks"
             ]
         }
     ];
