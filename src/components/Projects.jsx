@@ -48,7 +48,7 @@ const ProjectCard = ({ project, onClick, index }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className={`relative w-full ${project.isFlagship ? 'md:w-[800px] md:min-h-[500px]' : 'max-w-sm md:w-[350px] h-[480px]'} rounded-xl bg-black/40 border ${project.isFlagship ? 'border-yellow-500/30' : 'border-white/10'} cursor-pointer group perspective-1000`}
+                        className={`relative w-full ${project.isFlagship ? 'md:w-[580px] md:min-h-[500px]' : 'max-w-sm md:w-[350px] h-[480px]'} rounded-xl bg-black/40 border ${project.isFlagship ? 'border-yellow-500/30' : 'border-white/10'} cursor-pointer group perspective-1000`}
         >
             {/* Neon Glow */}
             <div
@@ -312,6 +312,35 @@ const Projects = () => {
 
     const projects = [
         {
+            id: "PRJ-005",
+            title: "CloudForge",
+            shortDesc: "Provisioned a highly available Multi-AZ AWS infrastructure using Terraform IaC, automating VPC, EKS, ECR, IAM, and ALB deployment.",
+            infra: "Auto-Scaling AWS EKS Cluster + GitHub Actions CI/CD.",
+            icon: <Layers className="w-8 h-8 text-yellow-500" />,
+            description: "Provisioned a highly available Multi-AZ AWS infrastructure using Terraform IaC, automating VPC, EKS, ECR, IAM, and ALB deployment - reducing provisioning effort from hours to minutes and eliminating single points of failure. Automated end-to-end CI/CD using GitHub Actions, enabling zero-downtime Kubernetes deployments with HPA (2-10 replicas), self-healing, and <5-second pod recovery via Prometheus/Grafana observability.",
+            metricsDisclaimer: "Metrics derived from HPA behavior under synthetic load testing.",
+            engineeringNotes: "Focused on recovery over happy-path. Tested failures extensively by simulating node termination and pod deletion to verify scheduling reliability. Implemented Prometheus/Grafana alerts.",
+            githubUrl: "https://github.com/vishalsoni18/CloudForge",
+            tech: ["AWS EKS", "Terraform", "Kubernetes", "GitHub Actions", "Prometheus", "Grafana", "Docker", "AWS ECR", "AWS IAM", "ALB"],
+            isFlagship: true,
+            stats: [
+                { label: "SCALING", value: "HPA / Auto" },
+                { label: "STRATEGY", value: "Rolling Update" },
+                { label: "RESILIENCE", value: "Self-Healing" },
+                { label: "PROVISIONING", value: "Terraform IaC" }
+            ],
+            validationSteps: [
+                "Pod deletion -> Verify auto restart",
+                "Node termination -> Verify pod scheduling on healthy nodes",
+                "Load spikes -> Verify HPA triggers scaling"
+            ],
+            protocols: [
+                "Infrastructure provisioning using reusable Terraform modules",
+                "Secure zero-downtime deployments using Kubernetes HPA",
+                "Keyless OIDC integrations for GitHub Actions deploy pipelines"
+            ]
+        },
+        {
             id: "PRJ-000",
             title: "CollabCode",
             shortDesc: "A distributed collaborative IDE enabling conflict-free editing across 100+ concurrent sessions using a custom Operational Transformation engine with sub-second synchronization latency.",
@@ -432,33 +461,6 @@ const Projects = () => {
                 "Connection monitoring and automatic JSON database fallback triggers",
                 "Real-time kitchen display system updates via server-sent events",
                 "Enterprise role-based access control and router guarding"
-            ]
-        },
-        {
-            id: "PRJ-005",
-            title: "CloudForge",
-            shortDesc: "Provisioned a highly available Multi-AZ AWS infrastructure using Terraform IaC, automating VPC, EKS, ECR, IAM, and ALB deployment.",
-            infra: "Auto-Scaling AWS EKS Cluster + GitHub Actions CI/CD.",
-            icon: <Layers className="w-8 h-8 text-yellow-600" />,
-            description: "Provisioned a highly available Multi-AZ AWS infrastructure using Terraform IaC, automating VPC, EKS, ECR, IAM, and ALB deployment - reducing provisioning effort from hours to minutes and eliminating single points of failure. Automated end-to-end CI/CD using GitHub Actions, enabling zero-downtime Kubernetes deployments with HPA (2-10 replicas), self-healing, and <5-second pod recovery via Prometheus/Grafana observability.",
-            metricsDisclaimer: "Metrics derived from HPA behavior under synthetic load testing.",
-            engineeringNotes: "Focused on recovery over happy-path. Tested failures extensively by simulating node termination and pod deletion to verify scheduling reliability. Implemented Prometheus/Grafana alerts.",
-            githubUrl: "https://github.com/vishalsoni18/CloudForge",
-            tech: ["AWS EKS", "Terraform", "Kubernetes", "GitHub Actions", "Prometheus", "Grafana", "Docker", "AWS ECR", "AWS IAM", "ALB"],
-            stats: [
-                { label: "SCALING", value: "HPA / Auto" },
-                { label: "STRATEGY", value: "Rolling Update" },
-                { label: "RESILIENCE", value: "Self-Healing" }
-            ],
-            validationSteps: [
-                "Pod deletion -> Verify auto restart",
-                "Node termination -> Verify pod scheduling on healthy nodes",
-                "Load spikes -> Verify HPA triggers scaling"
-            ],
-            protocols: [
-                "Infrastructure provisioning using reusable Terraform modules",
-                "Secure zero-downtime deployments using Kubernetes HPA",
-                "Keyless OIDC integrations for GitHub Actions deploy pipelines"
             ]
         }
     ];
