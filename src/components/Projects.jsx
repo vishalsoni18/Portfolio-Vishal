@@ -540,15 +540,30 @@ const Projects = () => {
                 </motion.div>
 
                 {/* 3D Carousel Grid */}
-                <div className="flex flex-wrap justify-center gap-8 perspective-2000">
-                    {projects.map((project, index) => (
-                        <ProjectCard
-                            key={project.id}
-                            project={project}
-                            index={index}
-                            onClick={setSelectedProject}
-                        />
-                    ))}
+                <div className="flex flex-col gap-8 perspective-2000">
+                    {/* Flagship Projects Row */}
+                    <div className="flex flex-col xl:flex-row justify-center gap-8 w-full">
+                        {projects.filter(p => p.isFlagship).map((project, index) => (
+                            <ProjectCard
+                                key={project.id}
+                                project={project}
+                                index={index}
+                                onClick={setSelectedProject}
+                            />
+                        ))}
+                    </div>
+
+                    {/* Other Projects Grid */}
+                    <div className="flex flex-wrap justify-center gap-8 w-full">
+                        {projects.filter(p => !p.isFlagship).map((project, index) => (
+                            <ProjectCard
+                                key={project.id}
+                                project={project}
+                                index={index + 2}
+                                onClick={setSelectedProject}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
 
